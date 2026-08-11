@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test - PT. Wadah Karya Persada</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    body { padding-top: 80px; background: #f8fafc; }
+    .test-section { padding: 40px 0; border-bottom: 1px solid #ddd; }
+    .test-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    .text-amber { color: #d97706; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1 class="text-amber text-center">🧪 TEST MODE</h1>
+  <p class="text-center text-muted">Cek apakah JavaScript berjalan dengan baik</p>
+  
+  <!-- ===== TEST SECTION 1: HERO ===== -->
+  <div class="test-section">
+    <h3>1. Hero Section</h3>
+    <div class="test-card">
+      <h4 id="hero-title">[Waiting for JS...]</h4>
+      <p id="hero-tagline">[Waiting for JS...]</p>
+    </div>
+  </div>
+  
+  <!-- ===== TEST SECTION 2: ABOUT ===== -->
+  <div class="test-section">
+    <h3>2. About Section</h3>
+    <div class="test-card">
+      <p id="about-desc">[Waiting for JS...]</p>
+    </div>
+  </div>
+  
+  <!-- ===== TEST SECTION 3: SERVICES ===== -->
+  <div class="test-section">
+    <h3>3. Services</h3>
+    <div class="test-card">
+      <div id="services-list" class="row">[Waiting for JS...]</div>
+    </div>
+  </div>
+  
+  <!-- ===== TEST SECTION 4: CONTACT ===== -->
+  <div class="test-section">
+    <h3>4. Contact</h3>
+    <div class="test-card">
+      <p id="contact-address">[Waiting for JS...]</p>
+      <p id="contact-phone">[Waiting for JS...]</p>
+      <p id="contact-email">[Waiting for JS...]</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SCRIPTS ===== -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- CONTENT JS (Data) -->
+<script>
+  // ===== COPY PASTE companyData DI SINI =====
+  const companyData = {
+    company: {
+      name: "PT. Wadah Karya Persada",
+      tagline: "Kontraktor Sipil, Mechanical Profesional & Terpercaya",
+      description: "PT Wadah Karya Persada merupakan perusahaan kontraktor yang bergerak di bidang pekerjaan sipil dan mekanikal, dengan komitmen untuk memberikan hasil pekerjaan yang berkualitas, aman, dan tepat waktu.",
+      address: "Perumahan Permata Wisata Blok C3 No.9, Cimuning, Mustikajaya, Bekasi",
+      phone: "0813-9929-4422",
+      email: "wadahkaryapersada.pt@yahoo.com",
+      whatsapp: "6281399294422",
+    },
+    services: [
+      { title: "Mechanical & Piping", desc: "Pekerjaan mekanikal dan instalasi pipa", icon: "fa-gears" },
+      { title: "Design & RAB", desc: "Pembuatan blueprint dan estimasi anggaran", icon: "fa-compass-drafting" },
+      { title: "Gedung & Bangunan", desc: "Konstruksi gedung perkantoran dan pabrik", icon: "fa-building" },
+      { title: "Renovasi", desc: "Layanan rekonstruksi dan retrofit struktural", icon: "fa-trowel-bricks" }
+    ],
+    strengths: [
+      { title: "Berpengalaman", desc: "Rekam jejak panjang proyek infrastruktur", icon: "fa-briefcase" },
+      { title: "Tepat Waktu", desc: "Disiplin tinggi terhadap jadwal", icon: "fa-clock" },
+      { title: "Profesional", desc: "Manajemen lapangan oleh engineer ahli", icon: "fa-user-tie" },
+      { title: "Berkualitas", desc: "Kepatuhan pada spesifikasi material", icon: "fa-award" }
+    ],
+    clients: [
+      { name: "Cargill", logo: "assets/images/client/cargill.webp" },
+      { name: "Summarecon Serpong", logo: "assets/images/client/sumarecon-serpong.webp" },
+      { name: "Summarecon Gading", logo: "assets/images/client/sumarecon-gading.webp" },
+      { name: "Al-Azhar Bekasi", logo: "assets/images/client/al-azhar-bekasi.webp" }
+    ],
+    experience: [
+      "Eksekusi 50+ Proyek Pembangunan Rumah Tinggal",
+      "Spesialis Kontrak Pekerjaan Sipil Struktur",
+      "Kemitraan Terpercaya dengan Korporasi Nasional",
+      "Skalabilitas Pengerjaan Fleksibel"
+    ],
+    projects: [
+      { title: "Gedung Steril", location: "Marunda", year: "Selesai", image: "assets/images/projects/farmasi.webp" },
+      { title: "Renovasi Rumah", location: "Bekasi", year: "Selesai", image: "assets/images/projects/renovrumah.webp" },
+      { title: "Pekerjaan Piping", location: "Kalsel", year: "Selesai", image: "assets/images/projects/piping.webp" }
+    ]
+  };
+  
+  console.log('✅ companyData loaded:', companyData);
+</script>
+
+<!-- MAIN JS -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    console.log('🔥 DOM loaded, starting injection...');
+    
+    // CEK APAKAH companyData TERSEDIA
+    if (typeof companyData === 'undefined') {
+      console.error('❌ companyData TIDAK DITEMUKAN!');
+      document.body.innerHTML = '<h1 style="color:red;text-align:center;padding:50px;">❌ ERROR: companyData tidak ditemukan!</h1>';
+      return;
+    }
+    
+    console.log('✅ companyData FOUND, starting injection...');
+    
+    try {
+      // ===== 1. HERO =====
+      document.getElementById("hero-title").textContent = companyData.company.name;
+      document.getElementById("hero-tagline").textContent = companyData.company.tagline;
+      console.log('✅ Hero injected');
+      
+      // ===== 2. ABOUT =====
+      document.getElementById("about-desc").textContent = companyData.company.description;
+      console.log('✅ About injected');
+      
+      // ===== 3. SERVICES =====
+      const servicesList = document.getElementById("services-list");
+      servicesList.innerHTML = '';
+      companyData.services.forEach(service => {
+        servicesList.innerHTML += `
+          <div class="col-md-3 mb-3">
+            <div class="p-3 bg-light rounded">
+              <i class="fas ${service.icon} text-amber"></i>
+              <h5>${service.title}</h5>
+              <p class="small">${service.desc}</p>
+            </div>
+          </div>
+        `;
+      });
+      console.log('✅ Services injected');
+      
+      // ===== 4. CONTACT =====
+      document.getElementById("contact-address").textContent = companyData.company.address;
+      document.getElementById("contact-phone").textContent = companyData.company.phone;
+      document.getElementById("contact-email").textContent = companyData.company.email;
+      console.log('✅ Contact injected');
+      
+      console.log('✅✅✅ ALL INJECTION COMPLETE!');
+      
+    } catch (error) {
+      console.error('❌ Error during injection:', error);
+    }
+  });
+</script>
+
+</body>
+</html>

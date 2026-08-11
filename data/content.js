@@ -1,7 +1,7 @@
 const companyData = {
   company: {
     name: "PT. Wadah Karya Persada",
-    tagline: "Kontraktor Sipil, Mechanical Profesional & Terpercaya",
+    tagline: "Kontraktor Sipil/Mechanical Profesional & Terpercaya",
     description: `PT Wadah Karya Persada merupakan perusahaan kontraktor yang bergerak di bidang pekerjaan sipil dan mekanikal, dengan komitmen untuk memberikan hasil pekerjaan yang berkualitas, aman, dan tepat waktu. Kami didukung oleh tenaga profesional yang berpengalaman serta sistem manajemen proyek yang terstruktur dalam setiap pelaksanaan pekerjaan. Melalui penerapan standar teknis dan keselamatan kerja yang baik, PT Wadah Karya Persada senantiasa berupaya menjadi mitra terpercaya bagi klien dalam mewujudkan proyek konstruksi yang andal dan berkelanjutan.`,
     address: "Perumahan Permata Wisata Blok C3 No.9, Cimuning, Mustikajaya, Bekasi",
     phone: "0813-9929-4422",
@@ -107,10 +107,10 @@ const companyData = {
       image: "assets/images/projects/warehouse.webp"
     },
     {
-      title: "Pembangunan/Renovasi Gedung Sekolah",
+      title: "Pemasangan LTDS (Liquid Tight Duct System) Pabrik Sawit Cargill",
       location: "Bekasi",
       year: "Selesai",
-      image: "assets/images/projects/sd-al-azhar.webp"
+      image: "assets/images/projects/cargill.jpeg"
     },
     {
       title: "Pembangunan Rumah Baru",
