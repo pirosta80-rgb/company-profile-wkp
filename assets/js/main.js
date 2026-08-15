@@ -149,19 +149,26 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log('✅ Email button diisi');
     }
 
-    // ===== 10. SCROLL PROGRESS BAR =====
-    window.addEventListener('scroll', () => {
-      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const progress = document.getElementById('scroll-progress');
-      if (progress) {
-        progress.style.width = (winScroll / height) * 100 + '%';
-      }
-    });
+    /* ===== SCROLL PROGRESS BAR ===== */
+window.addEventListener('scroll', function () {
+    const progressBar = document.getElementById('scroll-progress');
 
-    console.log('✅ Website PT. Wadah Karya Persada berhasil dimuat! 🚀');
+    if (!progressBar) return;
 
+    const scrollTop = window.scrollY;
+
+    const documentHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+
+    const scrollPercentage =
+        documentHeight > 0
+            ? scrollTop / documentHeight
+            : 0;
+
+    progressBar.style.transform =
+        `scaleX(${scrollPercentage})`;
+});
   } catch (error) {
-    console.error('❌ Error saat memuat data:', error);
+    console.error('❌ Error saat memproses data:', error);
   }
 });
