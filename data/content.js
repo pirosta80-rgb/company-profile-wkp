@@ -89,12 +89,6 @@ const companyData = {
       image: "assets/images/projects/farmasi.webp"
     },
     {
-      title: "Perbaikan Rumah / Renovasi",
-      location: "Bekasi",
-      // year: "Selesai",
-      image: "assets/images/projects/renovrumah.webp"
-    },
-    {
       title: "Pekerjaan Mekanikal / Piping",
       location: "Kalsel",
       // year: "Selesai",
@@ -113,16 +107,10 @@ const companyData = {
       image: "assets/images/projects/cargill.jpeg"
     },
     {
-      title: "Pembangunan Rumah Baru",
-      location: "Bekasi",
-      // year: "Selesai",
-      image: "assets/images/projects/rumahbaru.webp"
-    },
-    {
       title: "Pembangunan Toilet & Mushola",
       location: "Sumarecon Science Square Park, Serpong",
       // year: "Selesai",
       image: "assets/images/projects/toilet-mushola-sumarecon-serpong.webp"
-    }
+    },
   ]
 };
