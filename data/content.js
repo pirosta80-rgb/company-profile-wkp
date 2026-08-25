@@ -116,7 +116,7 @@ const companyData = {
       title: "Pembangunan Trashroom",
       location: "Sumarecon Mall Kelapa Gading",
       // year: "Selesai",
-      image: "assets/images/projects/trashroom-sumarecon-gading.jpeg"
+      image: "assets/images/projects/trashroom-sumarecon-mall-kelapa-gading.jpeg"
     },
   ]
 };
