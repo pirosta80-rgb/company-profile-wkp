@@ -112,5 +112,11 @@ const companyData = {
       // year: "Selesai",
       image: "assets/images/projects/toilet-mushola-sumarecon-serpong.webp"
     },
+    {
+      title: "Pembangunan Trashroom",
+      location: "Sumarecon Mall Kelapa Gading",
+      // year: "Selesai",
+      image: "assets/images/projects/trashroom-sumarecon-gading.webp"
+    },
   ]
 };
